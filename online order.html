@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food Online</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb);
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #d2691e;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        input, select, textarea, button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #d2691e;
+        }
+
+        button {
+            background-color: #d2691e;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #a0522d;
+        }
+
+        .info {
+            margin: 15px 0 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order Food Online</h1>
+        <p class="info">Fill out the details below to place your order!</p>
+        <form id="orderForm" onsubmit="submitOrder(event)">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="food-item">Select Food Item:</label>
+            <select id="food-item" required>
+                <option value="" disabled selected>Choose an item</option>
+                <option value="Spring Rolls">Spring Rolls - ₹120</option>
+                <option value="Paneer Butter Masala">Paneer Butter Masala - ₹250</option>
+                <option value="Chicken Biryani">Chicken Biryani - ₹300</option>
+                <option value="Gulab Jamun">Gulab Jamun - ₹90</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" placeholder="Enter quantity" required>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" placeholder="Enter your contact number" required>
+
+            <label for="instructions">Special Instructions (Optional):</label>
+            <textarea id="instructions" rows="3" placeholder="Add any special requests..."></textarea>
+
+            <button type="submit">Place Order</button>
+        </form>
+        <div class="success-message" id="successMessage">
+            🎉 Thank you! Your order has been placed successfully. We will contact you soon.
+        </div>
+    </div>
+
+    <script>
+        function submitOrder(event) {
+            event.preventDefault(); // Prevent page refresh
+            const name = document.getElementById('name').value;
+            const foodItem = document.getElementById('food-item').value;
+            const quantity = document.getElementById('quantity').value;
+            const contact = document.getElementById('contact').value;
+
+            if (name && foodItem && quantity && contact) {
+                // Display success message
+                document.getElementById('successMessage').style.display = 'block';
+
+                // Reset form fields
+                document.getElementById('orderForm').reset();
+            } else {
+                alert("Please fill out all required fields!");
+            }
+        }
+    </script>
+</body>
+</html>
