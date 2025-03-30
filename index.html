@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffefd5, #f0c27b);
+            color: #333;
+        }
+
+        .header {
+            background-color: #d2691e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .header p {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+
+        .menu {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-section {
+            margin-bottom: 20px;
+        }
+
+        .menu-section h2 {
+            margin-bottom: 10px;
+            color: #d2691e;
+            border-bottom: 2px solid #f0c27b;
+            padding-bottom: 5px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #ccc;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.03);
+            background-color: #fef6e4;
+        }
+
+        .menu-item h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .menu-item span {
+            color: #d2691e;
+            font-weight: bold;
+        }
+
+        .order-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .order-button a {
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #d2691e;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .order-button a:hover {
+            background-color: #a0522d;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .featured {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f1e7;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .featured h2 {
+            color: #d2691e;
+        }
+
+        .customer-reviews {
+            margin-top: 30px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .customer-reviews p {
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Golden Plate Restaurant</h1>
+        <p>Open Daily: 10:00 AM - 10:00 PM</p>
+    </div>
+
+    <div class="menu">
+        <div class="menu-section">
+            <h2>Appetizers</h2>
+            <div class="menu-item">
+                <h3>Spring Rolls</h3>
+                <span>₹120</span>
+            </div>
+            <div class="menu-item">
+                <h3>Tomato Soup</h3>
+                <span>₹100</span>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Main Course</h2>
+            <div class="menu-item">
+                <h3>Paneer Butter Masala</h3>
+                <span>₹250</span>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken Biryani</h3>
+                <span>₹300</span>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Desserts</h2>
+            <div class="menu-item">
+                <h3>Gulab Jamun</h3>
+                <span>₹90</span>
+            </div>
+            <div class="menu-item">
+                <h3>Ice Cream Sundae</h3>
+                <span>₹150</span>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Beverages</h2>
+            <div class="menu-item">
+                <h3>Lemonade</h3>
+                <span>₹70</span>
+            </div>
+            <div class="menu-item">
+                <h3>Masala Chai</h3>
+                <span>₹50</span>
+            </div>
+        </div>
+
+        <!-- Featured Section -->
+        <div class="featured">
+            <h2>Chef's Special</h2>
+            <p>Try our exclusive dish of the day!</p>
+        </div>
+
+        <!-- Online Ordering Button -->
+        <div class="order-button">
+            <!--<a href="https://1drv.ms/u/c/a63e26070a5794ea/EaoPXL-HculKpt1Jos77_GEBAPl71KyQIGqbwV0qAEYrng?e=lkKb8x" target="_blank">Order Online</a>-->
+            <a href="online order.html" target="_blank">Go to Order Form</a>
+
+        </div>
+
+        <!-- Customer Reviews Section -->
+        <div class="customer-reviews">
+            <h2>What Our Customers Say</h2>
+            <p>"Amazing food and great ambiance! Highly recommend."</p>
+            <p>"Paneer Butter Masala was just perfect!"</p>
+        </div>
+    </div>
+</body>
+</html>
